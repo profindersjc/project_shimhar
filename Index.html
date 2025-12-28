@@ -3,103 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us · SHIMHAR</title>
+<title>SHIMHAR</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:Poppins,sans-serif;background:radial-gradient(ellipse at top,#1a1311 0%,#0f0b0a 60%);color:#f5e6c8;line-height:1.7}
-header{padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-family:Cinzel,serif;font-size:24px;letter-spacing:2px}
-nav{display:flex;gap:18px}
-nav a{color:#f5e6c8;text-decoration:none;font-size:14px}
-.section{padding:60px 20px;max-width:900px;margin:auto}
-.section h1,.section h2{font-family:Cinzel,serif;margin-bottom:20px;color:#e9d6a3;letter-spacing:1px}
-.hero{text-align:center;padding-top:40px}
-.hero p{max-width:700px;margin:20px auto;font-size:17px}
-.block{margin-top:60px;background:rgba(255,255,255,0.02);padding:40px;border-radius:18px}
-.list{margin-top:20px}
-.list li{margin-bottom:10px}
-.cta{text-align:center;margin:80px 0}
-.btn{padding:14px 32px;background:#c8a15a;color:#000;text-decoration:none;font-weight:700;border-radius:4px;display:inline-block}
-footer{text-align:center;padding:30px;background:linear-gradient(to right,#090605,#120d0b);font-size:14px;margin-top:60px;color:#c8a15a}
+body{margin:0;font-family:Poppins,sans-serif;background:#0f0b0a;color:#f5e6c8}
+header{padding:16px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:nowrap}
+.logo{font-family:Cinzel,serif;font-size:26px;letter-spacing:2px}
+nav{display:flex;gap:18px;flex-wrap:nowrap}
+nav a{color:#f5e6c8;text-decoration:none}
+.btn{padding:12px 28px;background:#c8a15a;color:#000;text-decoration:none;font-weight:700;border-radius:4px;display:inline-block;margin-top:8px}
+.section{padding:80px 60px}
+.categories{display:flex;flex-direction:column;gap:40px}
+.product{display:flex;flex-direction:column;gap:18px;background:#1b1412;padding:30px;border-radius:14px;align-items:center;text-align:center}
+.product-img{position:relative;width:460px;max-width:100%}
+.product-img img{width:100%;border-radius:12px}
+.product-info h3{margin:0;font-size:22px}
+.product-info p{font-size:16px;margin:8px 0 16px 0}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);background:#c8a15a;color:#000;border:none;padding:6px 10px;font-weight:700;cursor:pointer}
+.arrow.left{left:-10px}
+.arrow.right{right:-10px}
+footer{text-align:center;padding:30px;background:#090605;font-size:14px}
+@media (max-width:768px){
+header{padding:14px 16px}
+.logo{font-size:22px}
+nav a{font-size:14px}
+.section{padding:40px 16px}
+.product-img{width:100%}
+}
+nav{gap:18px}
+.section{padding:40px 20px}
+.product-img{width:100%}
+}
+.section{padding:40px 20px}
+.product-img{width:100%}
+}
+.section{padding:40px 20px}
+.product-img{width:100%}
+}
+.section{padding:40px 20px}
+.product{flex-direction:column}
+.product-img{width:100%}
+}
 </style>
 </head>
 <body>
-
-<!-- ===== HEADER ===== -->
+<!-- ===== HEADER / BRAND NAVIGATION ===== -->
 <header>
-  <div class="logo">SHIMHAR</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="#">Contact</a>
-  </nav>
+<div class="logo">SHIMHAR</div>
+<nav>
+<a href="#">Home</a>
+
+<a href="file:///home/arecus/project%20shimhar/shimhar_about.html">About</a>
+<a href="file:///home/arecus/project%20shimhar/shimhar_contactus.html">Contact</a>
+</nav>
 </header>
 
-<!-- ===== HERO ===== -->
-<section class="section hero">
-  <h1>The Story Behind SHIMHAR</h1>
-  <p>
-    SHIMHAR was born from a simple idea — to revive the elegance of Ottoman-inspired furniture
-    and adapt it for modern living spaces.
-  </p>
-</section>
 
-<!-- ===== PHILOSOPHY ===== -->
-<section class="section block">
-  <h2>Our Philosophy</h2>
-  <p>
-    We believe in doing one thing and doing it right. Instead of offering dozens of products,
-    SHIMHAR focuses exclusively on the Ottoman Muda — a timeless piece that blends comfort,
-    function, and aesthetic harmony.
-  </p>
-</section>
+<!-- ===== MAIN PRODUCT LISTING SECTION ===== -->
+<section class="section">
 
-<!-- ===== WHY ONE PRODUCT ===== -->
-<section class="section block">
-  <h2>Why Only Ottoman Muda?</h2>
-  <ul class="list">
-    <li>Focused craftsmanship and attention to detail</li>
-    <li>Better material selection and durability</li>
-    <li>No mass production or trend chasing</li>
-    <li>Designed to last for years, not seasons</li>
-  </ul>
-</section>
+<!-- PRODUCT LIST START -->
+<div class="categories">
+<!-- SINGLE PRODUCT CARD -->
+<div class="product">
+<div class="product-img">
+<button class="arrow left" onclick="prevImg(0)">‹</button>
+<img id="img0" src="https://images.unsplash.com/photo-1616627988813-7c9f5f7f9c3a">
+<button class="arrow right" onclick="nextImg(0)">›</button>
+</div>
+<div class="product-info">
+<h3>Classic Ottoman Muda</h3>
+<p>₹3,499 · Handcrafted premium finish</p>
+<a href="#" class="btn">Buy Now</a>
+</div>
+</div>
+<!-- SINGLE PRODUCT CARD -->
+<div class="product">
+<div class="product-img">
+<button class="arrow left" onclick="prevImg(1)">‹</button>
+<img id="img1" src="https://images.unsplash.com/photo-1615873968403-89e068629265">
+<button class="arrow right" onclick="nextImg(1)">›</button>
+</div>
+<div class="product-info">
+<h3>Royal Pattern Muda</h3>
+<p>₹4,299 · Traditional Ottoman design</p>
+<a href="#" class="btn">Buy Now</a>
+</div>
+</div>
+<!-- SINGLE PRODUCT CARD -->
+<div class="product">
+<div class="product-img">
+<button class="arrow left" onclick="prevImg(2)">‹</button>
+<img id="img2" src="https://images.unsplash.com/photo-1582582429416-78b2e6c2d9b7">
+<button class="arrow right" onclick="nextImg(2)">›</button>
+</div>
+<div class="product-info">
+<h3>Modern Velvet Muda</h3>
+<p>₹3,999 · Soft velvet upholstery</p>
+<a href="#" class="btn">Buy Now</a>
+</div>
+</div>
+</div>
 
-<!-- ===== QUALITY ===== -->
-<section class="section block">
-  <h2>Craft & Quality</h2>
-  <p>
-    Each SHIMHAR Ottoman Muda is made using premium materials and finished with care.
-    From structural strength to surface detailing, every piece is quality-checked
-    before it reaches your home.
-  </p>
+<!-- PRODUCT LIST END -->
 </section>
-
-<!-- ===== LIFESTYLE IMAGE ===== -->
-<section class="section block" style="padding-top:0">
-  <img src="https://images.unsplash.com/photo-1616627988813-7c9f5f7f9c3a" alt="SHIMHAR Ottoman Lifestyle" style="width:100%;border-radius:16px;display:block">
-</section>
-
-<!-- ===== TRUST ===== -->
-<section class="section block">
-  <h2>Built on Trust</h2>
-  <ul class="list">
-    <li>Proudly crafted in India</li>
-    <li>Secure and transparent payments</li>
-    <li>Customer-first support</li>
-    <li>Carefully inspected before delivery</li>
-  </ul>
-</section>
-
-<!-- ===== CTA ===== -->
-<section class="cta">
-  <a href="file:///home/arecus/project%20shimhar/shimhar.html" class="btn">Explore Our Collection</a>
-</section>
-
 <!-- ===== FOOTER ===== -->
-<footer>
-  © 2025 SHIMHAR · Crafted with Heritage
-</footer>
-
+<footer>© 2025 SHIMHAR · Ottoman Muda Crafted with Heritage</footer>
+<!-- ===== IMAGE SLIDER SCRIPT ===== -->
+<script>
+const images=[
+[
+"https://images.unsplash.com/photo-1616627988813-7c9f5f7f9c3a",
+"https://images.unsplash.com/photo-1600121848594-d8644e57abab"
+],
+[
+"https://images.unsplash.com/photo-1615873968403-89e068629265",
+"https://images.unsplash.com/photo-1616486338812-9c6c0a6c3f3f"
+],
+[
+"https://images.unsplash.com/photo-1582582429416-78b2e6c2d9b7",
+"https://images.unsplash.com/photo-1598300052773-1f6a75b3b98a"
+]
+];
+let index=[0,0,0];
+function nextImg(i){index[i]=(index[i]+1)%images[i].length;document.getElementById('img'+i).src=images[i][index[i]]}
+function prevImg(i){index[i]=(index[i]-1+images[i].length)%images[i].length;document.getElementById('img'+i).src=images[i][index[i]]}
+</script>
 </body>
 </html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHIMHAR</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Poppins,sans-serif;background:#0f0b0a;color:#f5e6c8}
+header{padding:16px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:nowrap}
+.logo{font-family:Cinzel,serif;font-size:26px;letter-spacing:2px}
+nav{display:flex;gap:18px;flex-wrap:nowrap}
+nav a{color:#f5e6c8;text-decoration:none}
+.btn{padding:12px 28px;background:#c8a15a;color:#000;text-decoration:none;font-weight:700;border-radius:4px;display:inline-block;margin-top:8px}
+.section{padding:80px 60px}
+.categories{display:flex;flex-direction:column;gap:40px}
+.product{display:flex;flex-direction:column;gap:18px;background:#1b1412;padding:30px;border-radius:14px;align-items:center;text-align:center}
+.product-img{position:relative;width:460px;max-width:100%}
+.product-img img{width:100%;border-radius:12px}
+.product-info h3{margin:0;font-size:22px}
+.product-info p{font-size:16px;margin:8px 0 16px 0}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);background:#c8a15a;color:#000;border:none;padding:6px 10px;font-weight:700;cursor:pointer}
+.arrow.left{left:-10px}
+.arrow.right{right:-10px}
+footer{text-align:center;padding:30px;background:#090605;font-size:14px}
+@media (max-width:768px){
+header{padding:14px 16px}
+.logo{font-size:22px}
+nav a{font-size:14px}
+.section{padding:40px 16px}
+.product-img{width:100%}
+}
+nav{gap:18px}
+.section{padding:40px 20px}
+.product-img{width:100%}
+}
+.section{padding:40px 20px}
+.product-img{width:100%}
+}
+.section{padding:40px 20px}
+.product-img{width:100%}
+}
+.section{padding:40px 20px}
+.product{flex-direction:column}
+.product-img{width:100%}
+}
+</style>
+</head>
+<body>
+<!-- ===== HEADER / BRAND NAVIGATION ===== -->
+<header>
+<div class="logo">SHIMHAR</div>
+<nav>
+<a href="#">Home</a>
+
+<a href="file:///home/arecus/project%20shimhar/shimhar_about.html">About</a>
+<a href="file:///home/arecus/project%20shimhar/shimhar_contactus.html">Contact</a>
+</nav>
+</header>
+
+
+<!-- ===== MAIN PRODUCT LISTING SECTION ===== -->
+<section class="section">
+
+<!-- PRODUCT LIST START -->
+<div class="categories">
+<!-- SINGLE PRODUCT CARD -->
+<div class="product">
+<div class="product-img">
+<button class="arrow left" onclick="prevImg(0)">‹</button>
+<img id="img0" src="https://images.unsplash.com/photo-1616627988813-7c9f5f7f9c3a">
+<button class="arrow right" onclick="nextImg(0)">›</button>
+</div>
+<div class="product-info">
+<h3>Classic Ottoman Muda</h3>
+<p>₹3,499 · Handcrafted premium finish</p>
+<a href="#" class="btn">Buy Now</a>
+</div>
+</div>
+<!-- SINGLE PRODUCT CARD -->
+<div class="product">
+<div class="product-img">
+<button class="arrow left" onclick="prevImg(1)">‹</button>
+<img id="img1" src="https://images.unsplash.com/photo-1615873968403-89e068629265">
+<button class="arrow right" onclick="nextImg(1)">›</button>
+</div>
+<div class="product-info">
+<h3>Royal Pattern Muda</h3>
+<p>₹4,299 · Traditional Ottoman design</p>
+<a href="#" class="btn">Buy Now</a>
+</div>
+</div>
+<!-- SINGLE PRODUCT CARD -->
+<div class="product">
+<div class="product-img">
+<button class="arrow left" onclick="prevImg(2)">‹</button>
+<img id="img2" src="https://images.unsplash.com/photo-1582582429416-78b2e6c2d9b7">
+<button class="arrow right" onclick="nextImg(2)">›</button>
+</div>
+<div class="product-info">
+<h3>Modern Velvet Muda</h3>
+<p>₹3,999 · Soft velvet upholstery</p>
+<a href="#" class="btn">Buy Now</a>
+</div>
+</div>
+</div>
+
+<!-- PRODUCT LIST END -->
+</section>
+<!-- ===== FOOTER ===== -->
+<footer>© 2025 SHIMHAR · Ottoman Muda Crafted with Heritage</footer>
+<!-- ===== IMAGE SLIDER SCRIPT ===== -->
+<script>
+const images=[
+[
+"https://images.unsplash.com/photo-1616627988813-7c9f5f7f9c3a",
+"https://images.unsplash.com/photo-1600121848594-d8644e57abab"
+],
+[
+"https://images.unsplash.com/photo-1615873968403-89e068629265",
+"https://images.unsplash.com/photo-1616486338812-9c6c0a6c3f3f"
+],
+[
+"https://images.unsplash.com/photo-1582582429416-78b2e6c2d9b7",
+"https://images.unsplash.com/photo-1598300052773-1f6a75b3b98a"
+]
+];
+let index=[0,0,0];
+function nextImg(i){index[i]=(index[i]+1)%images[i].length;document.getElementById('img'+i).src=images[i][index[i]]}
+function prevImg(i){index[i]=(index[i]-1+images[i].length)%images[i].length;document.getElementById('img'+i).src=images[i][index[i]]}
+</script>
+</body>
+</html>
